@@ -1,13 +1,25 @@
 # Developer Docs
 docs/
 
-# Bower/npm/Gulp #
-##################
+# Bower #
+#########
+bower_components/*
+!bower_components/skeleton-sass
+bower_components/skeleton-sass/*
+!bower_components/skeleton-sass/skeleton.scss
+!bower_components/skeleton-sass/_landing.config.scss
+bower_components/skeleton-sass/*/
+!bower_components/skeleton-sass/skeleton
+bower_components/skeleton-sass/skeleton/*
+!bower_components/skeleton-sass/skeleton/core
+
+
+# npm/Gulp #
+############
 node_modules
 dist
 .tmp
 .sass-cache
-bower_components
 test/bower_components
 
 # Miscellaneous #
