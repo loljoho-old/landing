@@ -1,6 +1,6 @@
 # Developer Docs
 docs/
-ignore
+*ignore*
 
 # Bower #
 #########
