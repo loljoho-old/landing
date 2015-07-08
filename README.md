@@ -20,15 +20,19 @@ Objectives
 ----------
 
  - Google PageSpeed Insights:
- 
+
 
 Task List
 ---------
 
+__Tasks are ordered by descending priority__
+
+ - [ ] Prune application stylesheets
  - [ ] Sort out `wiredep` issues with `bower_components`
    - [ ] Examine `gulp/` directory in `gulp-angular` setup:
      - [ ] `inject.js`
      - [ ] `conf.js`
+   - [ ] Check by `gulp build`
  - [ ] Ensure jQuery CDN/local fall back script works
  - [ ] Double-check necessity of:
    - [ ] [modernizr](//modernizr.com)
