@@ -1,0 +1,30 @@
+// Responsive, 550px - 750px
+// ------------------------------
+@media (min-width: $query-sm) and (max-width: $query-md - 1) {
+  .section {
+    padding: 12rem 0 11rem;
+  }
+
+}
+
+
+
+
+// Responsive, 750px - 1000px
+// ------------------------------
+@media (min-width: $query-md) and (max-width: $query-lg - 1) {
+  .section {
+    padding: 14rem 0 15rem;
+  }
+}
+
+
+
+
+// Responsive, > 1000px
+// ------------------------------
+@media (min-width: $query-lg) {
+  .section {
+    padding: 20rem 0 19rem;
+  }
+}
