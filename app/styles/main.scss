@@ -1,204 +1,176 @@
 // bower:scss
 // endbower
-/*
-@import 'core/variables';
-@import 'core/mixins';
-@import 'core/layout';
-@import 'core/structure';
-@import 'core/typography';
-@import 'core/theming';
-*/
-body {
-  background: #fafafa;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #333;
-}
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 300px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-}
-
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-
-/**
- * Below is the stylesheet from the sample page ported to Sass.
- */
-
-
-// Buttons
+// Application Colours
 // ------------------------------
+$primary-base     : #003366;
+$secondary-base   : #336600;
+$accent-base      : #cc0000;
+
+$primary-dark     : #000033;
+$secondary-dark   : #003300;
+$accent-dark      : #660000;
+
+$primary-mild     : #336699;
+$secondary-mild   : #669933;
+$accent-mild      : #ff3333;
+
+$background-base  : #fafafa;
+$background-dark  : #191919;
+$background-mild  : #999999;
+
+$foreground-base  : #242424;
+$foreground-dark  : #000000;
+$foreground-mild  : #505050;
+
+/* Shared
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .button {
   border-radius: 100px;
 }
 
-// Sections
-// ------------------------------
+/* Sections
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .section {
   padding: 8rem 0 7rem;
   text-align: center;
-
-  // Hero Section
-  // ------------------------------
-  &.hero {
-    .phones {
-      position: relative;
-      .phone {
-        position: relative;
-        max-width: 80%;
-        margin: 3rem auto -12rem;
-        +.phone {
-          display: none;
-        }
-      }
-    }
-  }
-
-  // Values Section
-  // ------------------------------
-  &.values {
-    background-image: url('//placehold.it/1600x1000/22cc44/222222.png');
-    background-size: cover;
-    color: #fff;
-    padding-bottom: 5rem;
-    .value-multiplier {
-      margin-bottom: .5rem;
-      color: #11DFC7;
-    }
-    .value-heading {
-      margin-bottom: .3rem;
-    }
-    .value-description {
-      opacity: .8;
-      font-weight: 300;
-    }
-  }
-
-  // Help Section
-  // ------------------------------
-  &.get-help {
-    border-bottom: 1px solid #ddd;
-  }
-
-  // Categories Section
-  // ------------------------------
-  &.categories {
-    background-image: url('//placehold.it/1600x1000/22cc44/222222.png');
-    background-size: cover;
-    color: #fff;
-    .section-description {
-      margin-bottom: 4rem;
-    }
-  }
-
-  // Section Typography
-  // ------------------------------
-  .section-heading,
-  .section-description {
-    margin-bottom: 1.2rem;
-  }
+}
+.section-heading,
+.section-description {
+  margin-bottom: 1.2rem;
 }
 
+/* Hero
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.features {
+  position: relative;
+}
+.feature {
+  position: relative;
+  max-width: 80%;
+  margin: 3rem auto -12rem;
+}
+.feature + .feature {
+  display: none;
+}
 
-// Responsive > 550px
-// ------------------------------
+/* Values
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.values {
+  background-color: $secondary-dark;
+  background-size: cover;
+  color: #fff;
+  padding-bottom: 5rem;
+}
+.value-multiplier {
+  margin-bottom: .5rem;
+  color: $accent-mild;
+}
+.value-heading {
+  margin-bottom: .3rem;
+}
+.value-description {
+  opacity: .8;
+  font-weight: 300;
+}
+
+/* Help
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.get-help {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Categories
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.categories {
+  background-color: $primary-dark;
+  background-size: cover;
+  color: #fff;
+}
+.categories .section-description { 
+  margin-bottom: 4rem;
+}
+
+/* Bigger than 550 */
 @media (min-width: 550px) {
   .section {
     padding: 12rem 0 11rem;
-    &.hero {
-      padding-bottom: 12rem;
-      text-align: left;
-      height: 165px;
-      .hero-heading {
-        font-size: 2.4rem;
-      }
-    }
-    .phone {
-      position: absolute;
-      top: -7rem;
-      right: 3rem;
-      max-height: 362px;
-      z-index: 3;
-      +.phone {
-        top: -6rem;
-        display: block;
-        max-width: 73.8%;
-        right: 0;
-        z-index: 2;
-        max-height: 338px;
-      }
-    }
+  }
+  .hero {
+    padding-bottom: 12rem;
+    text-align: left;
+    height: 165px;
+  }
+  .feature {
+    position: absolute;
+    top: -7rem;
+    right: 3rem;
+    max-height: 362px;
+    z-index: 3;
+  }
+  .feature + .feature {
+    top: -6rem;
+    display: block;
+    max-width: 73.8%;
+    right: 0;
+    z-index: 2;
+    max-height: 338px;
+  }
+  .hero-heading {
+    font-size: 2.4rem;
   }
 }
 
-
-// Responsive > 750px
-// ------------------------------
+/* Bigger than 750 */
 @media (min-width: 750px) {
+  .hero {
+    height: 190px;
+  }
+  .hero-heading {
+    font-size: 2.6rem;
+  }
   .section {
     padding: 14rem 0 15rem;
-    &.hero {
-      height: 190px;
-      padding: 16rem 0 14rem;
-      .hero-heading {
-        font-size: 2.6rem;
-      }
-    }
-    &.categories {
-      padding: 15rem 0 8rem;
-    }
-    .section-description {
-      max-width: 60%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .phone {
-      top: -14rem;
-      right: 5rem;
-      max-height: 510px;
-      +.phone {
-        top: -12rem;
-        max-height: 472px;
-      }
-    }
+  }
+  .hero {
+    padding: 16rem 0 14rem;
+  }
+  .section-description {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .feature {
+    top: -14rem;
+    right: 5rem;
+    max-height: 510px;
+  }
+  .feature + .feature {
+    top: -12rem;
+    max-height: 472px;
+  }
+  .categories {
+    padding: 15rem 0 8rem;
   }
 }
 
-
-// Responsive > 1000px
-// ------------------------------
+/* Bigger than 1000 */
 @media (min-width: 1000px) {
   .section {
     padding: 20rem 0 19rem;
-    &.hero {
-      padding: 22rem 0;
-      .hero-heading {
-        font-size: 3.0rem;
-      }
-    }
-    .phone {
-      top: -16rem;
-      max-height: 615px;
-      +.phone {
-        top: -14rem;
-        max-height: 570px;
-      }
-    }
+  }
+  .hero {
+    padding: 22rem 0;
+  }
+  .hero-heading {
+    font-size: 3.0rem;
+  }
+  .feature {
+    top: -16rem;
+    max-height: 615px;
+  }
+  .feature + .feature {
+    top: -14rem;
+    max-height: 570px;
   }
 }
