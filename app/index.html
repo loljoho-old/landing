@@ -2,14 +2,19 @@
 <html class="no-js" lang="en">
 <head>
 
-  <!-- Meta Tags
+  <!-- Meta Meta Title Meta Meta
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title></title>
   <meta name="author" content="Jonathan Ho">
-  <meta name="description" content="Jonathan Ho · Web Developer · New York NY">
+  <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Favicons
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="favicon-32x32.png">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
   <!-- Web Application Manifest
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -19,7 +24,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="application-name" content="joho.io">
-  <link rel="icon" type="image/png" href="images/touch/chrome-touch-icon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="images/touch/chrome-touch-icon-192x192.png">
 
   <!-- Safari/iOS Homescreen
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -33,11 +38,6 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="msapplication-TileImage" content="images/touch/mstile-144x144.png">
   <meta name="theme-color" content="#ffffff">
-
-  <!-- Favicons
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
-  <link rel="shortcut icon" href="favicon.ico">
 
   <!-- Fonts & Icons
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -69,24 +69,13 @@
 </head>
 <body>
 
-  <!-- Legacy Browser Message
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!--[if lt IE 10]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
+<!-- Legacy Browser Message
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<!--[if lt IE 8]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
 
-<!--
-  <div class="hero-unit">
-    <h1>'Allo, 'Allo!</h1>
-    <p>You now have</p>
-    <ul>
-      <li>HTML5 Boilerplate</li>
-      <li>Sass</li>
-      <li>Modernizr</li>
-      <li>jQuery</li>
-    </ul>
-  </div>
--->
+
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -98,9 +87,9 @@
           <h4 class="hero-heading">Stop coding non-responsive sites. Let users view sites from anywhere.</h4>
           <a class="button button-primary" href="http://getskeleton.com">Try Skeleton</a>
         </div>
-        <div class="one-half column phones">
-          <img class="phone" src="//placehold.it/690x1414/e2e2e2/222222.png">
-          <img class="phone" src="//placehold.it/690x1414/e2e2e2/222222.png">
+        <div class="one-half column features">
+          <img class="feature" src="https://raw.githubusercontent.com/dhg/Skeleton/gh-pages/examples/landing/images/iphone.png">
+          <img class="feature" src="https://raw.githubusercontent.com/dhg/Skeleton/gh-pages/examples/landing/images/iphone.png">
         </div>
       </div>
     </div>
@@ -142,15 +131,20 @@
       <p class="section-description">Skeleton images sit easily in grid with .u-max-full-width class. I suggest exploring solution to serving different images based on device size.</p>
       <div class="row">
         <div class="one-half column category">
-          <img class="u-max-full-width" src="//placehold.it/800x450/e2e2e2/222222.png">
+          <img class="u-max-full-width" src="https://raw.githubusercontent.com/dhg/Skeleton/gh-pages/examples/landing/images/placeholder.png">
         </div>
         <div class="one-half column category">
-          <img class="u-max-full-width" src="//placehold.it/800x450/e2e2e2/222222.png">
+          <img class="u-max-full-width" src="https://raw.githubusercontent.com/dhg/Skeleton/gh-pages/examples/landing/images/placeholder.png">
         </div>
       </div>
     </div>
   </div>
 
+
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
   <!-- Google Analytics
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -166,14 +160,19 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!-- build:js scripts/vendor.js -->
   <!-- bower:js -->
-  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
+
+  <!-- jQuery Fallback to CDN
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script>window.jQuery || document.write('<script src="/bower_components/jquery/dist/jquery.js"><\/script>');</script>
 
   <!-- Compiled JavaScript
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!-- build:js scripts/main.js -->
   <script src="scripts/main.js"></script>
   <!-- endbuild -->
+
 </body>
 </html>
