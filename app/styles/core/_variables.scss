@@ -1,24 +1,29 @@
 /*
+ * _variables.scss v0.1.0
+ * Copyright © 2015 Jonathan Ho
+ */
+ 
+
+// Relative element multiplier function 
+// simulates the use of `rem` in CSS3
+//--------------------------------------------
+@function rem($multiplier) {
+  $font-size: 10px;
+  @return $multiplier * $font-size;
+}
+
+
 // Responsive Breakpoints
 // ------------------------------
-$query-xs : 400px  !default;
-$query-sm : 550px  !default;
-$query-md : 750px  !default;
-$query-lg : 1000px !default;
-$query-xl : 1200px !default;
-*/
+$breakpoint-xs  :  400px;
+$breakpoint-sm  :  550px;
+$breakpoint-md  :  750px;
+$breakpoint-lg  : 1000px;
+$breakpoint-xl  : 1200px;
 
 
-/* Global Colours
+// Application Colours
 // ------------------------------
-$background-base  : #fafafa;
-$background-dark  : #191919;
-$background-mild  : #999999;
-
-$foreground-base  : #242424;
-$foreground-dark  : #000000;
-$foreground-mild  : #505050;
-
 $primary-base     : #003366;
 $secondary-base   : #336600;
 $accent-base      : #cc0000;
@@ -30,7 +35,14 @@ $accent-dark      : #660000;
 $primary-mild     : #336699;
 $secondary-mild   : #669933;
 $accent-mild      : #ff3333;
-*/
+
+$background-base  : #fafafa;
+$background-dark  : #191919;
+$background-mild  : #999999;
+
+$foreground-base  : #242424;
+$foreground-dark  : #000000;
+$foreground-mild  : #505050;
 
 
 
