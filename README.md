@@ -10,6 +10,7 @@ Project built with:
  - jQuery
  - [gulp-webapp](//github.com/yeoman/generator-gulp-webapp)
  - [Skeleton](//getskeleton.com/)
+ - [Font-Aweesome-SVG-PNG](https://github.com/encharm/Font-Awesome-SVG-PNG)
 
 
 Development
@@ -19,22 +20,23 @@ Development
 Objectives
 ----------
 
- - Google PageSpeed Insights:
 
 
-Task List
----------
+Tasklist
+--------
+ 
 
-__Tasks are ordered by descending priority__
-
- - [ ] Prune application stylesheets
- - [ ] Sort out `wiredep` issues with `bower_components`
-   - [ ] Examine `gulp/` directory in `gulp-angular` setup:
+__Gulp & Bower__
+ - [ ] Sort out `gulpfile` issues:
+   - [ ] Examine `wiredep` and `main-bower-files` in tasks
+   - [ ] Compare with `gulp-angular` Yeoman generator files:
      - [ ] `inject.js`
      - [ ] `conf.js`
-   - [ ] Check by `gulp build`
- - [ ] Ensure jQuery CDN/local fall back script works
- - [ ] Double-check necessity of:
-   - [ ] [modernizr](//modernizr.com)
-   - [ ] [respond](//github.com/scottjehl/Respond)
-   - [ ] [normalize.css](//github.com/necolas/normalize.css/)
+ - [ ] Fix jQuery fallback inline `<script>` code
+ - [ ] Verify with `gulp build`
+ 
+__Google PageSpeed Insights__
+ - [ ] [`npm install psi --save-dev`](https://www.npmjs.com/package/psi)
+   - [ ] Gulp Integration [Sample Project](https://github.com/addyosmani/psi-gulp-sample/blob/master/gulpfile.js)
+
+
