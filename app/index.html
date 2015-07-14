@@ -68,19 +68,14 @@ __      __   _     ___              _                         _  _            __
 
   <!-- Custom Foundation Build
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="/styles/normalize.css">
-  <link rel="stylesheet" href="/styles/foundation.min.css">
-  <script src="/scripts/modernizr.js"></script>
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/foundation.min.css">
+  <script src="scripts/modernizr.js"></script>
 
-  <!-- Compiled Sass
+  <!-- Compiled Stylesheets
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!-- build:css styles/app.css -->
   <link rel="stylesheet" href="styles/app.css">
-  <!-- endbuild -->
-
-  <!-- Modernizr
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!-- build:js scripts/vendor/modernizr.js -->
   <!-- endbuild -->
 
 </head>
@@ -94,18 +89,93 @@ __      __   _     ___              _                         _  _            __
 
   <ul class="skip-links">
     <li id="top">
-      <a class="button" href="#">Skip to Content</a>
+      <a class="button" href="#"></a>
     </li>
   </ul>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  
+  <div class="sticky">
+    <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="#top">Jonathan Ho</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+    
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <li class="menu-icon has-dropdown">
+            <a href="#">
+              <i class="fa fa-fw fa-lg fa-file-text"></i>
+              <span>Résumé</span>
+            </a>
+            <ul class="dropdown">
+              <li class="menu-icon">
+                <a href="#">
+                  <img class="icon" src="images/icons/dropbox-64px.png">
+                  <span>Dropbox</span>
+                </a>
+              </li>
+              <li class="menu-icon">
+                <a href="#">
+                  <img class="icon" src="images/icons/googledrive-64px.png">
+                  <span>Google Drive</span>
+                </a>
+              </li>
+              <li class="menu-icon">
+                <a href="#">
+                  <img class="icon" src="images/icons/onedrive-64px.png">
+                  <span>OneDrive</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-icon">
+            <a href="#">
+              <i class="fa fa-fw fa-lg fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+          </li>
+          <li class="menu-icon">
+            <a href="#">
+              <i class="fa fa-fw fa-lg fa-github-alt"></i>
+              <span>GitHub</span>
+            </a>
+          </li>
+          <!--
+          <li class="has-dropdown">
+            <a href="#">Résumé</a>
+            <ul class="dropdown">
+              <li><a href="#">First link in dropdown</a></li>
+            </ul>
+          </li>
+          -->
+        </ul>
+    
+        <!-- Left Nav Section -->
+        <ul class="left"></ul>
+      </section>
+    </nav>
+  </div>
+  <div data-magellan-expedition="fixed">
+    <dl class="sub-nav">
+      <dd data-magellan-arrival="home"><a href="#home">Home</a></dd>
+      <dd data-magellan-arrival="info"><a href="#info">Info</a></dd>
+      <dd data-magellan-arrival="misc"><a href="#info">Info</a></dd>
+    </dl>
+  </div>
 
 
     <!-- Page Header
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <section id="home" class="masthead">
+    <section data-magellan-destination="home" 
+             id="home" 
+             class="masthead">
+
+      <a name="home"></a>
       <div class="row">
         <div class="medium-7 large-6 columns">
           <h1>Jonathan Ho</h1>
@@ -117,69 +187,120 @@ __      __   _     ___              _                         _  _            __
           <h5>All Night.</h5>
         </div>
       </div>
-      <!--
 
-      <div class="mast-props row">
-        <div class="four columns mast-prop">
-          <img class="mast-img" src="images/logos/dhtml-192px.png">
-        </div>
-        <div class="four columns mast-prop">
-          <img class="mast-img" src="images/logos/angular-192px.png">
-        </div>
-        <div class="four columns mast-prop">
-          <img class="mast-img" src="images/logos/lamp-192px.png">
-        </div>
-      </div>
-      -->
     </section>
-
-
-    <!-- Navbar
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div class="navbar-spacer"></div>
-    <nav class="navbar">
-      <div class="container">
-        <ul class="navbar-list">
-          <li class="navbar-item">
-            <a class="navbar-link" href="#top">
-              <i class="material-icons">&#xE316;</i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
 
 
     <!-- SECTION  About
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <section id="about" class="section grid images">
-      <h2 class="header">Heritage</h2>
+      <h2 data-magellan-destination="info" class="header">Heritage</h2>
+      <a name="info"></a>
       <div class="row">
-        <p class="panel">
-          <strong class="show-for-small-only">This text is shown only on a small screen.</strong>
-          <strong class="show-for-medium-up">This text is shown on medium screens and up.</strong>
-          <strong class="show-for-medium-only">This text is shown only on a medium screen.</strong>
-          <strong class="show-for-large-up">This text is shown on large screens and up.</strong>
-          <strong class="show-for-large-only">This text is shown only on a large screen.</strong>
-          <strong class="show-for-xlarge-up">This text is shown on xlarge screens and up.</strong>
-          <strong class="show-for-xlarge-only">This text is shown only on an xlarge screen.</strong>
-          <strong class="show-for-xxlarge-up">This text is shown on xxlarge screens and up.</strong>
-        </p>
       </div>
     </section>
 
 
-    <!-- Skills Section
+    <!-- SECTION Skills
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <section id="skills" class="section grid logos">
       <h2 class="header">Technologies</h2>
+
+      <div class="row">
+
+        <div class="small-6 medium-4 large-3 columns">
+          <div class="service">
+            <div class="service-icon-box">
+              <img src="images/thumbs/angular.png" class="service-icon">
+            </div>
+            <h4 class="service-heading">AngularJS</h4>
+            <p class="service-description">JavaScript MVC Framework</p>
+          </div>
+        </div>
+
+        <div class="small-6 medium-4 large-3 columns">
+          <div class="service">
+            <div class="service-icon-box">
+              <img src="images/thumbs/gulp.png" class="service-icon">
+            </div>
+            <h4 class="service-heading">Gulp.js</h4>
+            <p class="service-description">Workflow Automation</p>
+          </div>
+        </div>
+
+        <div class="small-6 medium-4 large-3 columns">
+          <div class="service">
+            <div class="service-icon-box">
+              <img src="images/thumbs/bower.png" class="service-icon">
+            </div>
+            <h4 class="service-heading">Bower</h4>
+            <p class="service-description">Client-Side Dependencies</p>
+          </div>
+        </div>
+
+        <div class="small-6 medium-4 large-3 columns">
+          <div class="service">
+            <div class="service-icon-box">
+              <img src="images/thumbs/node.png" class="service-icon">
+            </div>
+            <h4 class="service-heading">Node.js</h4>
+            <p class="service-description">Runtime Environment</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="small-6 medium-4 large-3 columns">
+          <div class="service">
+            <div class="service-icon-box">
+              <img src="images/thumbs/sass.png" class="service-icon">
+            </div>
+            <h4 class="service-heading">Sass/Scss</h4>
+            <p class="service-description">CSS Pre-Processor</p>
+          </div>
+        </div>
+
+        <div class="small-6 medium-4 large-3 columns">
+          <div class="service">
+            <div class="service-icon-box">
+              <img src="images/thumbs/git.png" class="service-icon">
+            </div>
+            <h4 class="service-heading">Git</h4>
+            <p class="service-description">Version Control</p>
+          </div>
+        </div>
+
+        <div class="small-6 medium-4 large-3 columns">
+          <div class="service">
+            <div class="service-icon-box">
+              <img src="images/thumbs/aws.png" class="service-icon">
+            </div>
+            <h4 class="service-heading">AWS</h4>
+            <p class="service-description">Cloud Computing</p>
+          </div>
+        </div>
+
+        <div class="small-6 medium-4 large-3 columns">
+          <div class="service">
+            <div class="service-icon-box">
+              <img src="images/thumbs/yeoman.png" class="service-icon">
+            </div>
+            <h4 class="service-heading">Yeoman</h4>
+            <p class="service-description">Project Scaffolding</p>
+          </div>
+        </div>
+
+      </div>
+
       
     </section>
 
 
-    <!-- Contact
+    <!-- SECTION Work
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <section id="contact">
+    <section id="work">
       <div class="row">
         <div class="large-12 columns">
           <div class="large-4 columns">
@@ -241,7 +362,9 @@ __      __   _     ___              _                         _  _            __
   <!-- Custom Foundation Build
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="scripts/jquery.js"></script>
+  <script src="scripts/fastclick.js"></script>
   <script src="scripts/foundation.min.js"></script>
+
 
   <!-- Compiled JavaScript
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -252,7 +375,9 @@ __      __   _     ___              _                         _  _            __
   <!-- Initialisation
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script>
-    $(document).foundation();
+    $(document).foundation({
+      "magellan-expedition": {fixed_top: 45}
+    });
   </script>
 </body>
 </html>
