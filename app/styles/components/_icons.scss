@@ -11,3 +11,24 @@
   height: 1em;
   width: 1em;
 }
+
+
+nav {
+  .menu-icon {
+    a {
+      .fa.fa-2x, .material-icons, .icon {
+        vertical-align: middle;
+        line-height: 33px;
+      }
+      .fa.fa-lg {
+        vertical-align: middle;
+        line-height: 24px;
+      }
+      img.icon {
+        width: 24px;
+        height: 24px;
+        display: inline;
+      }
+    }
+  }
+}

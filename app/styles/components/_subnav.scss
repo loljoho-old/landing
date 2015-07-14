@@ -1,0 +1,12 @@
+[data-magellan-expedition],
+[data-magellan-expedition-clone] {
+  background-color: transparent;
+  dd {
+    //background-color: #fff;
+  }
+}
+
+// Hide transition from 'sticky' because of transparent background
+.sticky.fixed + [data-magellan-expedition-clone] {
+  visibility: hidden;
+}
