@@ -1,0 +1,18 @@
+# humanstxt.org/
+# The humans to whom we owe the existence of this project of sinful sacrilege,
+# and the technologies that were squandered amidst its spawn under colophon
+
+# TEAM
+
+    Jonathan Ho -- Developer -- joho@joho.io
+
+# THANKS
+
+    Julia Kim
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, Modernizr, Normalize.css
+    Skeleton, Font-Awesome, Ionicons
+    Font-Awesome-SVG-PNG

@@ -8,6 +8,8 @@ import {stream as wiredep} from 'wiredep';
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
+// Styles Task
+// ------------------------------
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
     .pipe($.plumber())
@@ -23,6 +25,8 @@ gulp.task('styles', () => {
     .pipe(reload({stream: true}));
 });
 
+// Lint/Test Tasks
+// ------------------------------
 function lint(files, options) {
   return () => {
     return gulp.src(files)
@@ -46,6 +50,8 @@ const testLintOptions = {
 gulp.task('lint', lint('app/scripts/**/*.js'));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
+// HTML Task
+// ------------------------------
 gulp.task('html', ['styles'], () => {
   const assets = $.useref.assets({searchPath: ['.tmp', 'app', '.']});
 
@@ -59,8 +65,10 @@ gulp.task('html', ['styles'], () => {
     .pipe(gulp.dest('dist'));
 });
 
+// Images Task
+// ------------------------------
 gulp.task('images', () => {
-  return gulp.src('app/images/**/*')
+  return gulp.src(['app/images/**/*', 'app/sprites/**/*'])
     .pipe($.if($.if.isFile, $.cache($.imagemin({
       progressive: true,
       interlaced: true,
@@ -75,6 +83,8 @@ gulp.task('images', () => {
     .pipe(gulp.dest('dist/images'));
 });
 
+// Fonts Task
+// ------------------------------
 gulp.task('fonts', () => {
   return gulp.src(require('main-bower-files')({
     filter: '**/*.{eot,svg,ttf,woff,woff2}'
@@ -83,6 +93,8 @@ gulp.task('fonts', () => {
     .pipe(gulp.dest('dist/fonts'));
 });
 
+// Extras Task
+// ------------------------------
 gulp.task('extras', () => {
   return gulp.src([
     'app/*.*',
@@ -92,8 +104,12 @@ gulp.task('extras', () => {
   }).pipe(gulp.dest('dist'));
 });
 
+// Clean Task
+// ------------------------------
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
+// Default Serve Task
+// ------------------------------
 gulp.task('serve', ['styles', 'fonts'], () => {
   browserSync({
     notify: false,
@@ -118,6 +134,8 @@ gulp.task('serve', ['styles', 'fonts'], () => {
   gulp.watch('bower.json', ['wiredep', 'fonts']);
 });
 
+// Production Serve Task
+// ------------------------------
 gulp.task('serve:dist', () => {
   browserSync({
     notify: false,
@@ -128,6 +146,8 @@ gulp.task('serve:dist', () => {
   });
 });
 
+// Browser Test Task
+// ------------------------------
 gulp.task('serve:test', () => {
   browserSync({
     notify: false,
@@ -145,7 +165,8 @@ gulp.task('serve:test', () => {
   gulp.watch('test/spec/**/*.js', ['lint:test']);
 });
 
-// inject bower components
+// Dependency Wiring Task
+// ------------------------------
 gulp.task('wiredep', () => {
   gulp.src('app/styles/*.scss')
     .pipe(wiredep({
@@ -160,6 +181,32 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
+
+// Inject Task (WIP)
+// ------------------------------
+/*
+gulp.task('inject', ['scripts', 'styles'], () => {
+*/
+//  var injectStyles  = gulp.src('.tmp/styles/*.css',   {read: false});
+//  var injectScripts = gulp.src('app/scripts/**/*.js', {read: false});
+/*
+  var injectOptions = {
+    ignorePath: ['src', '.tmp'],
+    addRootSlash: false
+  };
+
+  return gulp.src('app/index.html')
+    .pipe($.inject(injectStyles,  injectOptions))
+    .pipe($.inject(injectScripst, injectOptions))
+//    .pipe(wiredep({ignorePath: /^(\.\.\/)*\.\./}))
+    .pipe(gulp.dest('app'));
+
+});
+*/
+
+
+// Build Task
+// ------------------------------
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });

@@ -1,4 +1,5 @@
 # robotstxt.org/
 
+# Allow Crawling, All Content
 User-agent: * 
 Disallow:

@@ -1,7 +1,7 @@
 {
   "name": "landing-page",
   "description": "Lightweight Landing Page",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "authors": [
     {
       "name": "Jonathan Ho",
@@ -9,16 +9,17 @@
       "homepage": "http://joho.io"
     }
   ],
+  "homepage": "https://github.com/loljoho/landing",
   "repository": {
     "type": "git",
     "url": "https://github.com/loljoho/landing.git"
   },
-  "homepage": "https://github.com/loljoho/landing",
   "private": true,
   "dependencies": {
-    "jquery": "~2.1.1",
-    "modernizr": "~2.8.1",
-    "skeleton-sass": "~2.5.1"
+    "jquery": "~2.1.4",
+    "modernizr": "~2.8.3",
+    "normalize.css": "~3.0.3",
+    "skeleton": "~2.0.4"
   },
   "devDependencies": {
     "chai": "~3.0.0",
