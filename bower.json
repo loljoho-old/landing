@@ -1,7 +1,7 @@
 {
   "name": "landing-page",
   "description": "Lightweight Landing Page",
-  "version": "0.4.0",
+  "version": "0.7.0",
   "authors": [
     {
       "name": "Jonathan Ho",
@@ -16,10 +16,6 @@
   },
   "private": true,
   "dependencies": {
-    "jquery": "~2.1.4",
-    "modernizr": "~2.8.3",
-    "normalize.css": "~3.0.3",
-    "skeleton": "~2.0.4"
   },
   "devDependencies": {
     "chai": "~3.0.0",

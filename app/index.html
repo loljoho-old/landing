@@ -63,21 +63,24 @@ __      __   _     ___              _                         _  _            __
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!-- build:css styles/vendor.css -->
   <!-- bower:css -->
-  <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css" />
-  <link rel="stylesheet" href="/bower_components/skeleton/css/skeleton.css" />
   <!-- endbower -->
   <!-- endbuild -->
 
+  <!-- Custom Foundation Build
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="/styles/normalize.css">
+  <link rel="stylesheet" href="/styles/foundation.min.css">
+  <script src="/scripts/modernizr.js"></script>
+
   <!-- Compiled Sass
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!-- build:css styles/main.css -->
-  <link rel="stylesheet" href="styles/main.css">
+  <!-- build:css styles/app.css -->
+  <link rel="stylesheet" href="styles/app.css">
   <!-- endbuild -->
 
   <!-- Modernizr
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!-- build:js scripts/vendor/modernizr.js -->
-  <script src="/bower_components/modernizr/modernizr.js"></script>
   <!-- endbuild -->
 
 </head>
@@ -97,22 +100,24 @@ __      __   _     ___              _                         _  _            __
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
+  
 
 
     <!-- Page Header
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <section id="home" class="header">
-      <div class="masthead row">
-        <div class="seven columns">
-          <h1>
-            Jonathan Ho
-            <small>Web Developer</small>
-          </h1>
+    <section id="home" class="masthead">
+      <div class="row">
+        <div class="medium-7 large-6 columns">
+          <h1>Jonathan Ho</h1>
+          <h3>Web Developer</h3>
         </div>
-        <div class="five columns">
+        <div class="medium-5 large-6 columns">
+          <h4>Lorem Ipsum</h4>
+          <h5>All Day.</h5>
+          <h5>All Night.</h5>
         </div>
       </div>
+      <!--
 
       <div class="mast-props row">
         <div class="four columns mast-prop">
@@ -123,25 +128,6 @@ __      __   _     ___              _                         _  _            __
         </div>
         <div class="four columns mast-prop">
           <img class="mast-img" src="images/logos/lamp-192px.png">
-        </div>
-      </div>
-      <!--
-      <div class="value-props row">
-        <div class="three columns value-prop">
-          <img class="value-img" src="images/drives/googledrive.svg">
-          Google Drive
-        </div>
-        <div class="three columns value-prop">
-          <img class="value-img" src="images/drives/dropbox.svg">
-           Dropbox
-        </div>
-        <div class="three columns value-prop">
-          <img class="value-img" src="images/drives/onedrive.svg">
-          OneDrive
-        </div>
-        <div class="three columns value-prop">
-          <img class="value-img" src="images/drives/onedrive.svg">
-          OneDrive
         </div>
       </div>
       -->
@@ -169,17 +155,17 @@ __      __   _     ___              _                         _  _            __
     <section id="about" class="section grid images">
       <h2 class="header">Heritage</h2>
       <div class="row">
-        
+        <p class="panel">
+          <strong class="show-for-small-only">This text is shown only on a small screen.</strong>
+          <strong class="show-for-medium-up">This text is shown on medium screens and up.</strong>
+          <strong class="show-for-medium-only">This text is shown only on a medium screen.</strong>
+          <strong class="show-for-large-up">This text is shown on large screens and up.</strong>
+          <strong class="show-for-large-only">This text is shown only on a large screen.</strong>
+          <strong class="show-for-xlarge-up">This text is shown on xlarge screens and up.</strong>
+          <strong class="show-for-xlarge-only">This text is shown only on an xlarge screen.</strong>
+          <strong class="show-for-xxlarge-up">This text is shown on xxlarge screens and up.</strong>
+        </p>
       </div>
-    </section>
-
-
-    <!-- BANNER   Expertise
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <section id="contact" class="banner">
-      <div class="container">
-        <div class="row">
-      </div>        
     </section>
 
 
@@ -190,7 +176,47 @@ __      __   _     ___              _                         _  _            __
       
     </section>
 
-  </div>
+
+    <!-- Contact
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section id="contact">
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="large-4 columns">
+          </div>
+          <div class="large-4 columns">
+          </div>
+          <div class="large-4 columns">
+          </div>
+        </div>
+      </div>        
+    </section>
+
+
+    <!-- Footer
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <footer>
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="row">
+            <div class="large-6 columns">
+              <p>Copyright © 2015 Jonathan Ho</p>
+            </div>
+            <div class="large-6 columns">
+              <ul class="inline-list right">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Work</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
 
   <!-- End Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -209,14 +235,13 @@ __      __   _     ___              _                         _  _            __
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!-- build:js scripts/vendor.js -->
   <!-- bower:js -->
-  <script src="/bower_components/jquery/dist/jquery.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
-  <!-- jQuery CDN with Fallback
+  <!-- Custom Foundation Build
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="/bower_components/jquery/dist/jquery.min.js"><\/script>');</script>
+  <script src="scripts/jquery.js"></script>
+  <script src="scripts/foundation.min.js"></script>
 
   <!-- Compiled JavaScript
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -224,5 +249,10 @@ __      __   _     ___              _                         _  _            __
   <script src="scripts/main.js"></script>
   <!-- endbuild -->
 
+  <!-- Initialisation
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script>
+    $(document).foundation();
+  </script>
 </body>
 </html>
