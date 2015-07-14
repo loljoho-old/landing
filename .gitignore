@@ -2,6 +2,7 @@
 docs
 api
 *ignore*
+scripts/
 
 # Bower #
 #########
